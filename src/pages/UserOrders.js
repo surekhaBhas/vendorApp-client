@@ -24,7 +24,7 @@ const UserOrders = (props) => {
   return (
     <Layout>
     <div className='order-container container'>
-     
+        <h3 className='text-center'>My Orders</h3>
         {data.length?data.map(order=><UserOrderComp key={order._id} order={order}/>):<p>No orders</p>}
        
     </div>
