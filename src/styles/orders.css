@@ -1,0 +1,14 @@
+.order-container{
+    margin-top:20px;
+    margin-bottom:20px;
+    display:flex;
+    flex-direction:column;
+    row-gap:10px;
+}
+.order-card{
+    padding:15px;
+    box-shadow:5px 5px 10px 10px rgba(0,0,0,0.4)
+}
+.sub{
+    font-weight: bold;
+}
