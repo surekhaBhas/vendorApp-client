@@ -4,9 +4,10 @@ import {connect} from 'react-redux';
 import axios from 'axios'
 import UserOrderComp from './UserOrderComp';
 import '../styles/orders.css'
+import { useNavigate } from 'react-router-dom';
 
 const UserOrders = (props) => {
-  
+  const navigate=useNavigate()
   const [data,setData]=useState([])
 
   useEffect(()=>{
@@ -25,8 +26,9 @@ const UserOrders = (props) => {
     <div className='order-container container'>
      
         {data.length?data.map(order=><UserOrderComp key={order._id} order={order}/>):<p>No orders</p>}
-  
+       
     </div>
+    <button className='btn btn-info text-center m-5' style={{float:"right"}} onClick={()=>navigate('/user/home')}>Back</button>
     </Layout>
   );
   }

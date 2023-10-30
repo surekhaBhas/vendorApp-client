@@ -1,12 +1,13 @@
-import React from 'react';
+import React ,{useState}from 'react';
 import axios from 'axios'
 
 const UserOrderComp = ({order}) => {
-
+ 
     const selectShipping = async (e) => {
         const array = [1, 2, 3];
         for (const value of array) {
           const response = value == e.target.value ? 'yes' : 'no';
+          
           try {
             const res = await axios.put(`http://localhost:5500/purchase/response/${order._id}/${value}`, { response });
             console.log(res);
